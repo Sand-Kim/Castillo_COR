@@ -42,13 +42,25 @@
 		 table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px; /* Adds space above the table */
+            margin-top: 20px; 
         }
         th, td {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
         }
+		.outer-border {
+		border-collapse: separate; 
+		border-spacing: 0;
+		border: 1px solid black;
+		}
+
+		.outer-border td {
+		border: none;
+		}
+		.borderheight {
+			line-height: 1.5;
+		}
     </style>
 </head>
 <body>
@@ -66,15 +78,14 @@
 <table>
     <thead>
         <tr>
-            <th colspan=4; style="text-align: center; font-family: arial; background-color: #CBCDF5; font-size: 12px;">STUDENT GENERAL INFORMATION</th>
+            <th colspan=3; style="text-align: center; font-family: arial; background-color: #CBCDF5; font-size: 12px;">STUDENT GENERAL INFORMATION</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>Student No.</td>
-            <td>College: </td>
-            <td>School Year: </td>
-			<td>Testing</td>
+    <tbody class="outer-border" style="font-family: Arial; font-size: 10px;">
+        <tr class="borderheight">
+            <td><b>Student No:</b> 2022-8-0213 <br> <b>Name: CASTILLO, SANDARA KIM<BR><BR>Gender: </b> Female      <b>Age: </b>20</td>
+            <td><b>College:</b> College of Sciences<br><b>Program: </b>Bachelor of Science in Information Technology<br><b>Major: <br>Year Level: 3rd Year</b></td>
+            <td><b>School Year: 2024-2025 FIRST SEMESTER<br> Curicculum: </b> 08-BSIT-2019 <br><b> Scholorship</b></td>
         </tr>
     </tbody>
 </table>
